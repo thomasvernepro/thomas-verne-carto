@@ -1,366 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Consultant cartographe spécialisé en analyse territoriale, SIG et cartographie pour collectivités et bureaux d’étude.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maintenance – Thomas Verne</title>
 
-    <title>Thomas Verne - Consultant en cartographie</title>
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:linear-gradient(135deg,#ffde59,#ff914d);
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
-    <link rel="stylesheet" href="style.css">
+.box{
+    background:white;
+    padding:50px 40px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    max-width:500px;
+}
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/faviconsvg.svg">
+h1{
+    margin-bottom:10px;
+    font-size:32px;
+}
 
-    <!-- Police logo -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+p{
+    color:#555;
+    line-height:1.6;
+}
+
+.loader{
+    margin:30px auto 0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:4px solid #eee;
+    border-top:4px solid #ff914d;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{ transform:rotate(360deg); }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            <img src="images/faviconsvg.svg" alt="Logo Thomas Verne">
-            <div class="logo-text">
-                <h2>Thomas VERNE</h2>
-                <span>Consultant en cartographie</span>
-            </div>
-        </div>
-
-        <ul>
-            <li><a href="#about" class="active">Qui je suis ?</a></li>
-            <li><a href="#services">Mes prestations</a></li>
-            <li><a href="#portfolio">Mes réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-    </nav>
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-        <div class="hero-content">
-
-            <h1>
-                Cartographe indépendant au service des projets territoriaux et des acteurs publics comme privés.
-            </h1>
-
-            <p class="hero-sub">
-                J’accompagne vos projets par l’analyse spatiale, la structuration de données SIG et la production de
-                cartographies claires pour éclairer la décision et la compréhension des situations.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#services" class="btn-primary">Voir mes prestations</a>
-                <a href="#contact" class="btn-secondary">Me contacter</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="about">
-
-        <div class="about-text">
-            <h1>Qui suis-je ?</h1>
-
-            <p>Diplômé d’un Master spécialisé dans les dynamiques territoriales et environnementales,
-                j’ai construit mon parcours autour d’une conviction forte : une bonne compréhension du territoire
-                est essentielle pour éclairer la décision publique et accompagner les transitions.</p>
-
-            <p>Au fil de mes expériences en collectivité et en bureau d’études, j’ai développé une expertise
-                en systèmes d’information géographique et en cartographie appliquée aux projets territoriaux.</p>
-
-            <p>J’accorde une importance particulière à la lisibilité des données et à leur capacité à devenir
-                de véritables outils d’aide à la décision.</p>
-
-            <p>Aujourd’hui consultant indépendant, je mets cette expertise au service des collectivités,
-                bureaux et équipes projet avec un appui cartographique souple et opérationnel.</p>
-
-        </div>
-
-        <div class="about-photo">
-            <img src="images/thomas.png" alt="Photo de Thomas Verne">
-        </div>
-
-    </section>
-
-    <!-- ================= SERVICES ================= -->
-
-    <section id="services" class="services">
-
-        <h1 class="section-title">Mes prestations 📝</h1>
-
-        <div class="services-split">
-
-            <div class="services-left">
-
-                <div class="expertise-grid">
-
-                    <div class="expertise-card">
-                        <h3>🧭 Production cartographique</h3>
-                        <ul>
-                            <li>Cartes thématiques</li>
-                            <li>Cartes de synthèse</li>
-                            <li>Cartes de lecture territoriale</li>
-                            <li>Cartes pour rapports</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <h3>📊 Traitement et analyse de données SIG</h3>
-                        <ul>
-                            <li>Structuration de bases de données</li>
-                            <li>Croisements de données</li>
-                            <li>Analyses spatiales</li>
-                            <li>Préparation de données pour études</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <h3>📄 Appui aux diagnostics et études</h3>
-                        <ul>
-                            <li>Cartographie pour diagnostics territoriaux</li>
-                            <li>Visualisation des enjeux</li>
-                            <li>Supports d’aide à la décision</li>
-                            <li>Illustrations pour stratégies territoriales</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <h3>🎨 Mise en forme cartographique</h3>
-                        <ul>
-                            <li>Harmonisation graphique</li>
-                            <li>Reprise de cartes existantes</li>
-                            <li>Amélioration de lisibilité</li>
-                            <li>Cartes pédagogiques</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="services-right">
-                <div class="method-box">
-
-                    <h2>🧭 Ma méthode</h2>
-
-                    <div class="method-step"><span>1</span>
-                        <p>Échange rapide pour comprendre votre besoin et vos données.</p>
-                    </div>
-
-                    <div class="method-step"><span>2</span>
-                        <p>Analyse des données et cadrage cartographique adapté aux enjeux.</p>
-                    </div>
-
-                    <div class="method-step"><span>3</span>
-                        <p>Production de cartes lisibles, utiles et directement mobilisables.</p>
-                    </div>
-
-                    <div class="method-step"><span>4</span>
-                        <p>Ajustements avec vous et livraison prête à être utilisée.</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= PORTFOLIO ================= -->
-
-    <section id="portfolio" class="portfolio">
-
-        <h1 class="section-title">Mes réalisations 🗺️</h1>
-
-        <div class="carousel">
-
-            <button class="nav prev">&#10094;</button>
-
-            <div class="carousel-track">
-                <img src="images/carte1.png" class="carousel-img">
-                <img src="images/carte2.png" class="carousel-img">
-                <img src="images/carte3.png" class="carousel-img">
-                <img src="images/carte4.png" class="carousel-img">
-                <img src="images/carte5.png" class="carousel-img">
-                <img src="images/carte6.png" class="carousel-img">
-                <img src="images/carte7.png" class="carousel-img">
-                <img src="images/carte8.png" class="carousel-img">
-                <img src="images/carte9.png" class="carousel-img">
-                <img src="images/carte10.png" class="carousel-img">
-                <img src="images/carte11.png" class="carousel-img">
-                <img src="images/carte12.png" class="carousel-img">
-                <img src="images/carte13.png" class="carousel-img">
-                <img src="images/carte14.png" class="carousel-img">
-                <img src="images/carte15.png" class="carousel-img">
-                <img src="images/carte16.png" class="carousel-img">
-            </div>
-
-            <button class="nav next">&#10095;</button>
-
-        </div>
-
-    </section>
-
-    <!-- MODAL -->
-    <div class="modal" id="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-    </div>
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="contact">
-
-        <h1 class="section-title">Contact 📧</h1>
-
-        <p class="contact-intro">
-            Si vous avez un projet ou une question, n'hésitez pas.
-        </p>
-
-        <form class="contact-form" action="https://formspree.io/f/xlgwpzbr" method="POST" id="contact-form">
-            <input type="text" name="name" placeholder="Votre nom et prénom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Décrivez votre besoin..." required></textarea>
-            <button type="submit">Envoyer</button>
-            <p id="form-message" style="display:none; color:green; margin-top:15px;">
-                Votre demande a bien été enregistrée ✔
-            </p>
-        </form>
-
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <div class="footer-info">
-                <strong>Thomas Verne</strong><br>
-                Consultant en cartographie<br>
-                📍Blois, France
-            </div>
-
-            <div class="footer-info">
-                <strong>Contact</strong><br>
-                thomas.verne.pro@gmail.com
-            </div>
-
-            <div class="footer-info">
-                <strong>SIREN</strong><br>
-                999 787 047
-            </div>
-
-            <div class="footer-info">
-                <strong>Me suivre :</strong><br>
-                <a href="https://www.linkedin.com/in/thomas-verne-03a4521a6/" target="_blank" rel="noopener noreferrer"
-                    class="linkedin-link">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-
-        </div>
-
-    </footer>
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script>
-
-        /* ===== CAROUSEL ===== */
-
-        const track = document.querySelector('.carousel-track');
-        const images = document.querySelectorAll('.carousel-img');
-        let index = 0;
-
-        document.querySelector('.next').onclick = () => {
-            if (index < images.length - 1) {
-                index++;
-                track.style.transform = `translateX(-${index * 100}%)`;
-            }
-        };
-
-        document.querySelector('.prev').onclick = () => {
-            if (index > 0) {
-                index--;
-                track.style.transform = `translateX(-${index * 100}%)`;
-            }
-        };
-
-        /* ===== ZOOM ===== */
-
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-
-        images.forEach(img => {
-            img.onclick = () => {
-                modal.style.display = "flex";
-                modalImg.src = img.src;
-            }
-        });
-
-        document.querySelector(".close").onclick = () => modal.style.display = "none";
-        modal.onclick = () => modal.style.display = "none";
-
-        /* ===== NAVBAR ACTIVE ULTRA FIABLE ===== */
-
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".navbar a");
-
-        window.addEventListener("scroll", () => {
-
-            let current = "";
-
-            sections.forEach(section => {
-
-                const rect = section.getBoundingClientRect();
-
-                // ⭐ zone visuelle réelle (milieu écran)
-                if (rect.top <= window.innerHeight * 0.35 &&
-                    rect.bottom >= window.innerHeight * 0.35) {
-                    current = section.id;
-                }
-
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
-
-        });
-            const form = document.getElementById("contact-form");
-            const msg = document.getElementById("form-message");
-
-            form.addEventListener("submit", async function(e){
-                e.preventDefault();
-            const data = new FormData(form);
-
-            const response = await fetch(form.action, {
-                method: form.method,
-            body: data,
-            headers: {'Accept': 'application/json' }
-    });
-
-            if(response.ok){
-                form.reset();
-            msg.style.display = "block";
-    }
-});
-    </script>
+<div class="box">
+    <h1>Site en maintenance</h1>
+    <p>
+        Je mets actuellement à jour le site pour améliorer mes services.  
+        Merci pour votre patience 🙂
+    </p>
+
+    <div class="loader"></div>
+
+    <p style="margin-top:25px;font-size:14px;">
+        Vous pouvez toujours me contacter :<br>
+        <strong>thomas.verne.pro@gmail.com</strong>
+    </p>
+</div>
 
 </body>
-
 </html>
