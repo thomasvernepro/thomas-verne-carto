@@ -226,10 +226,10 @@
             Si vous avez un projet ou une question, n'hésitez pas.
         </p>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Votre nom et prénom" required>
-            <input type="email" placeholder="Votre email" required>
-            <textarea placeholder="Décrivez votre besoin..." required></textarea>
+        <form class="contact-form" action="https://formspree.io/f/xlgwpzbr" method="POST">
+            <input type="text" name="name" placeholder="Votre nom et prénom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Décrivez votre besoin..." required></textarea>
             <button type="submit">Envoyer</button>
         </form>
 
