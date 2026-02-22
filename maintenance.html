@@ -2,23 +2,71 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Site en maintenance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maintenance – Thomas Verne</title>
+
 <style>
 body{
-    font-family:sans-serif;
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:linear-gradient(135deg,#ffde59,#ff914d);
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    height:100vh;
-    background:#f2f2f2;
     text-align:center;
+}
+
+.box{
+    background:white;
+    padding:50px 40px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    max-width:500px;
+}
+
+h1{
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+p{
+    color:#555;
+    line-height:1.6;
+}
+
+.loader{
+    margin:30px auto 0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:4px solid #eee;
+    border-top:4px solid #ff914d;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{ transform:rotate(360deg); }
 }
 </style>
 </head>
+
 <body>
-<div>
-<h1>Site en maintenance</h1>
-<p>Je reviens très vite 🙂</p>
+
+<div class="box">
+    <h1>Site en maintenance</h1>
+    <p>
+        Je mets actuellement à jour le site pour améliorer mes services.  
+        Merci pour votre patience 🙂
+    </p>
+
+    <div class="loader"></div>
+
+    <p style="margin-top:25px;font-size:14px;">
+        Vous pouvez toujours me contacter :<br>
+        <strong>thomas.verne.pro@gmail.com</strong>
+    </p>
 </div>
+
 </body>
 </html>
